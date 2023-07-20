@@ -2,8 +2,6 @@ package com.onmo.webviewsample.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import androidx.appcompat.widget.AppCompatEditText
@@ -14,7 +12,7 @@ import com.onmo.webviewsample.R
  *
  * @author Srini
  */
-class TestOnMoMainActivityTemp : AppCompatActivity() {
+class TestWebMainActivity : AppCompatActivity() {
     private val defaultLoadingUrl = "https://challengesarena.com/demo/home"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,8 +41,8 @@ class TestOnMoMainActivityTemp : AppCompatActivity() {
     protected fun lauchWeb() {
 
         if(isCustomTabSwitch)
-        intent = Intent(this, CustomChromeTab::class.java)
-        else intent = Intent(this, MainActivity::class.java)
+        intent = Intent(this, CustomTabActivity::class.java)
+        else intent = Intent(this, WebviewActivity::class.java)
         val url = urlField!!.text.toString()
         intent.putExtra("URL", url)
        /* Log.d("Test","url ->"+url)

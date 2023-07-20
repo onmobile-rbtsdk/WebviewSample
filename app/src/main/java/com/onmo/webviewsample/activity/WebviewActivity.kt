@@ -21,7 +21,7 @@ import com.samples.drtumifancentral.utils.Utils
  *
  * @author Srini
  */
-class MainActivity : AppCompatActivity() {
+class WebviewActivity : AppCompatActivity() {
     private lateinit var webView: WebView
     private lateinit var progressBar: ProgressBar
     private lateinit var dialog: AlertDialog
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initDialog(message: String) {
-        dialog = AlertDialog.Builder(this@MainActivity).setMessage(message)
+        dialog = AlertDialog.Builder(this@WebviewActivity).setMessage(message)
             .setPositiveButton("Retry") { _, _ ->
                 dialog.dismiss()
                 loadWebView(webView)
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun loadWebView(webView: WebView) {
-        if (Utils.isNetworkAvailable(this@MainActivity)) {
+        if (Utils.isNetworkAvailable(this@WebviewActivity)) {
             webView.webViewClient = object : WebViewClient() {
                 override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
                     Log.d(TAG, "shouldOverrideUrlLoading: "+url)

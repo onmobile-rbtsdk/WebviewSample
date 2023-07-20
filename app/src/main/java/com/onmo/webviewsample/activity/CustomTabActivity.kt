@@ -13,7 +13,7 @@ import com.onmo.webviewsample.R
  *
  * @author Srini
  */
-class CustomChromeTab : AppCompatActivity() {
+class CustomTabActivity : AppCompatActivity() {
     private var defaultLoadingUrl:String = "https://play.onmo.com/"
     private var package_name = "com.android.chrome";
     private val REQUEST_CODE = 100
@@ -33,7 +33,7 @@ class CustomChromeTab : AppCompatActivity() {
     private fun openUrl() {
         val customIntent = CustomTabsIntent.Builder()
         val params = CustomTabColorSchemeParams.Builder()
-        params.setToolbarColor(ContextCompat.getColor(this@CustomChromeTab, com.google.android.material.R.color.design_default_color_primary))
+        params.setToolbarColor(ContextCompat.getColor(this@CustomTabActivity, com.google.android.material.R.color.design_default_color_primary))
 //        params.setToolbarColor(ContextCompat.getColor(this@CustomChromeTab, R.color.black))
         customIntent.setDefaultColorSchemeParams(params.build())
         customIntent.setShowTitle(true)

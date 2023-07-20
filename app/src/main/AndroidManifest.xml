@@ -14,17 +14,17 @@
         android:theme="@style/Theme.SampleView"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".activity.CustomChromeTab"
+            android:name=".activity.CustomTabActivity"
             android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.WebviewActivity"
             android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.TestOnMoMainActivityTemp"
+            android:name=".activity.TestWebMainActivity"
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
